@@ -22,7 +22,7 @@
         theSharedInstance = [super allocWithZone:zone];
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         manager.operationQueue.maxConcurrentOperationCount = 5;
-        manager.requestSerializer.timeoutInterval=30.f;
+        manager.requestSerializer.timeoutInterval= 30.f;
         manager.responseSerializer.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/json",@"text/plain",nil];
         [manager.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
         theSharedInstance.HTTPSessionManager = manager;

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CubicWeightObjects.h"
+
 /*
 {
     "objects": [

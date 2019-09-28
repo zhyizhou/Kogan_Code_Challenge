@@ -23,6 +23,7 @@
 		D49E33E5233DD6C90011499E /* KGHTTPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D49E33E4233DD6C90011499E /* KGHTTPRequestManager.m */; };
 		D49E33EC233DE7840011499E /* CubicWeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49E33EA233DE7840011499E /* CubicWeightViewController.m */; };
 		D49E33ED233DE7840011499E /* CubicWeightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D49E33EB233DE7840011499E /* CubicWeightViewController.xib */; };
+		D49E33F4233EF8E00011499E /* CubicWeightViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D49E33F3233EF8E00011499E /* CubicWeightViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		D49E33E9233DE7840011499E /* CubicWeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubicWeightViewController.h; sourceTree = "<group>"; };
 		D49E33EA233DE7840011499E /* CubicWeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubicWeightViewController.m; sourceTree = "<group>"; };
 		D49E33EB233DE7840011499E /* CubicWeightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CubicWeightViewController.xib; sourceTree = "<group>"; };
+		D49E33F2233EF8E00011499E /* CubicWeightViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubicWeightViewModel.h; sourceTree = "<group>"; };
+		D49E33F3233EF8E00011499E /* CubicWeightViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubicWeightViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +220,6 @@
 		D49E33AF233DA85E0011499E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D49E33B1233DAC8D0011499E /* Model */,
 				D49E33B0233DA8690011499E /* CubicWeight */,
 			);
 			path = Classes;
@@ -226,9 +228,9 @@
 		D49E33B0233DA8690011499E /* CubicWeight */ = {
 			isa = PBXGroup;
 			children = (
-				D49E33E9233DE7840011499E /* CubicWeightViewController.h */,
-				D49E33EA233DE7840011499E /* CubicWeightViewController.m */,
-				D49E33EB233DE7840011499E /* CubicWeightViewController.xib */,
+				D49E33B1233DAC8D0011499E /* Model */,
+				D49E33F0233EF8510011499E /* ViewModel */,
+				D49E33F1233EF86C0011499E /* ViewController */,
 			);
 			path = CubicWeight;
 			sourceTree = "<group>";
@@ -253,6 +255,25 @@
 				D49E33E4233DD6C90011499E /* KGHTTPRequestManager.m */,
 			);
 			path = KGHTTPRequest;
+			sourceTree = "<group>";
+		};
+		D49E33F0233EF8510011499E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D49E33F2233EF8E00011499E /* CubicWeightViewModel.h */,
+				D49E33F3233EF8E00011499E /* CubicWeightViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D49E33F1233EF86C0011499E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D49E33E9233DE7840011499E /* CubicWeightViewController.h */,
+				D49E33EA233DE7840011499E /* CubicWeightViewController.m */,
+				D49E33EB233DE7840011499E /* CubicWeightViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +500,7 @@
 				D49E3386233CCD2D0011499E /* main.m in Sources */,
 				D49E33B5233DAD0C0011499E /* CubicWeightRequestResponse.m in Sources */,
 				D49E33BB233DAEC70011499E /* CubicWeightObjectSize.m in Sources */,
+				D49E33F4233EF8E00011499E /* CubicWeightViewModel.m in Sources */,
 				D49E33EC233DE7840011499E /* CubicWeightViewController.m in Sources */,
 				D49E3372233CCD2B0011499E /* AppDelegate.m in Sources */,
 				D49E33B8233DAD2B0011499E /* CubicWeightObjects.m in Sources */,
