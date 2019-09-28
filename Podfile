@@ -17,11 +17,15 @@ target 'Coding Challenge' do
   target 'Coding ChallengeTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'YYKit'
+    pod 'AFNetworking'
   end
 
   target 'Coding ChallengeUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'YYKit'
+    pod 'AFNetworking'
   end
 
 end

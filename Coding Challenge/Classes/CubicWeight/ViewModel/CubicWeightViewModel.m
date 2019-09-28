@@ -54,14 +54,14 @@
     
     __weak __typeof(self)weakSelf = self;
     dispatch_group_notify(self.fetchDataGroup, self.fetchDataQueue, ^{
+        if (self.dimsArray.count == 0) {
+            completionHandler(self.totalCount,0,0);
+        }
         dispatch_async(dispatch_get_main_queue(), ^{
             __strong __typeof(weakSelf)strongSelf = weakSelf;
             int airConCount = (int)strongSelf.dimsArray.count;
             float totalCubicWeight = 0;
             for (NSArray *dims in self.dimsArray) {
-                if (dims.count != 3) {
-                    continue;
-                }
                 float cubicWeight = [dims[0] floatValue] * [dims[1] floatValue] * [dims[2] floatValue] * 250 / 1000000;
                 totalCubicWeight += cubicWeight;
             }
@@ -98,7 +98,7 @@
         }
         dispatch_group_leave(self.fetchDataGroup);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"Request error: %@", page);
+        NSLog(@"Request error: %@ Page: %@", error, page);
         dispatch_group_leave(self.fetchDataGroup);
     }];
 }

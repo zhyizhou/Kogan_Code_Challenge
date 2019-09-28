@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-
+#import "CubicWeightViewController.h"
 @interface Coding_ChallengeUITests : XCTestCase
 
 @end
@@ -31,9 +31,22 @@
     // UI tests must launch the application that they test.
     XCUIApplication *app = [[XCUIApplication alloc] init];
     [app launch];
-
+    
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    XCUIElement *totalLabel = app.otherElements[@"Total Count"];
+    XCTAssertFalse([totalLabel exists]);
+    XCUIElement *zeroLabel = app.otherElements[@"0"];
+    XCTAssertFalse([zeroLabel exists]);
+    XCUIElement *airLabel = app.staticTexts[@"Air Coniditioner"];
+    XCTAssertFalse([airLabel exists]);
+    XCUIElement *cubicLabel = app.otherElements[@"Average Cubic Weight:"];
+    XCTAssertFalse([cubicLabel exists]);
+    XCUIElement *resultLabel = app.otherElements[@"0 kg"];
+    XCTAssertFalse([resultLabel exists]);
+
+    XCUIElement *fetchBtn = app.buttons[@"Fetch and Calculate"];
+    [fetchBtn tap];
 }
 
 - (void)testLaunchPerformance {

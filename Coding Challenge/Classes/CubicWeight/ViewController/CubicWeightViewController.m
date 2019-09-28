@@ -19,11 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cubicWeightResultLabel; // a label shows the average cubic weight for all air conditioners
 @property (weak, nonatomic) IBOutlet UIButton *calculateButton; // click to calculate average cubic weight
 
-@property (nonatomic, strong) NSMutableArray *dimsArray; // an array stores dims of each air conditioner, e.g. [[l,w,h], [l,w,h]...]
-@property (nonatomic, assign) int totalCount; // total count of products
-@property (nonatomic, assign) float averageCubicWeight; // average cubic weight for all air conditioners
-
-@property (nonatomic, strong) CubicWeightViewModel *cubicWeightViewModel;
+@property (nonatomic, strong) CubicWeightViewModel *cubicWeightViewModel; // ViewModel of CubicWeightViewController
 
 @end
 
